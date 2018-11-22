@@ -76,7 +76,7 @@ abstract class RpcAcsRequest extends AcsRequest
 	    foreach($parameters as $key => $value)
 	    {
 			$canonicalizedQueryString .= '&' . $this->percentEncode($key). '=' . $this->percentEncode($value);
-	    }
+	    }	
 	    $stringToSign = parent::getMethod().'&%2F&' . $this->percentencode(substr($canonicalizedQueryString, 1));
 	    $signature = $iSigner->signString($stringToSign, $accessKeySecret."&");
 

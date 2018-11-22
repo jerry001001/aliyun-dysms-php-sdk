@@ -1,6 +1,6 @@
 {
     "name": "jerry001001/aliyun-dysms-php-sdk",
-    "description": "Aliyun SMS SDK for PHP",
+    "description": "Aliyun SMS message SDK for PHP",
     "keywords": [ "aliyun", "SMS", "sdk" ],
     "type": "library",
     "license": "Apache-2.0",
@@ -12,7 +12,8 @@
         }
     ],
     "require": {
-        "php": ">=5.5.0"
+        "php": ">=5.5.0",
+        "guzzlehttp/guzzle": "~6.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.0"
@@ -21,7 +22,8 @@
     "autoload": {
         "psr-4": {
             "Aliyun\\": "lib/",
-            "Aliyun\\Test\\": "tests/"
+            "Aliyun\\Test\\": "tests/",
+            "AliyunMNS\\": "lib/MNS"
         }
     }
 }
